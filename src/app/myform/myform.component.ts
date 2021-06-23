@@ -18,7 +18,6 @@ export class MyformComponent implements OnInit {
     lessons: this.fb.array([]),
   });
   constructor(private fb: FormBuilder) {}
-
   ngOnInit(): void {}
   get lessons() {
     return this.myform.controls['lessons'] as FormArray;
@@ -28,7 +27,6 @@ export class MyformComponent implements OnInit {
       title: ['', Validators.required],
       level: ['beginner', Validators.required],
     });
-
     this.lessons.push(lessonForm);
   }
   deleteLesson(lessonIndex: number) {

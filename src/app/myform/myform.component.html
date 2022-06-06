@@ -2,7 +2,7 @@
   <ng-container formArrayName="lessons">
     <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
       <div [formGroupName]="i">
-        <p>dept<input type="text" formControlName="dept" /></p>
+        <p>dept<input type="text" formControlName="title" /></p>
         <button (click)="deleteLesson(i)">Delete</button>
       </div>
     </ng-container>
